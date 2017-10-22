@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/pure-min.css">
+        <link href='https://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" href="/css/grids-responsive-min.css">
+        <link rel="stylesheet" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block extrahead %}{% endblock %}
+    </head>
+    <body>
+ {% block content %}{% endblock %}
+<footer>
+EVE Online and the EVE logo are the registered trademarks of CCP hf. All rights are reserved worldwide. All other trademarks are the property of their respective owners. EVE Online, the EVE logo, EVE and all associated logos and designs are the intellectual property of CCP hf. All artwork, screenshots, characters, vehicles, storylines, world facts or other recognizable features of the intellectual property relating to these trademarks are likewise the intellectual property of CCP hf. CCP hf. has granted permission to plundering.rocks to use EVE Online and all associated logos and designs for promotional and information purposes on its website but does not endorse, and is not in any way affiliated with, plundering.rocks. CCP is in no way responsible for the content on or functioning of this website, nor can it be liable for any damage arising from the use of this website.
+</footer>
+{% block footercontent %}{% endblock %}
+
+</body>
+</html>
