@@ -1,38 +1,30 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Slim 3</title>
-        <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-        <style>
-            body {
-                margin: 50px 0 0 0;
-                padding: 0;
-                width: 100%;
-                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-                text-align: center;
-                color: #aaa;
-                font-size: 18px;
-            }
+{% extends "base.phtml" %}
 
-            h1 {
-                color: #719e40;
-                letter-spacing: -3px;
-                font-family: 'Lato', sans-serif;
-                font-size: 100px;
-                font-weight: 200;
-                margin-bottom: 0;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Slim</h1>
-        <div>a microframework for PHP</div>
+{% block title %}Plundering Rocks{%endblock%}
+{% block extrahead %}
+<script src="/js/index.js"></script>
+<script src="/js/ores.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+{%endblock%}
+{% block content %}
+<div class="pure-g">
+<div class="pure-u-1">
+<div class="content-box">
+<p>Plundering rocks is a (currently) experimental website, to allow miners to anonymously compare their mining against other miners.</p>
 
-        <?php if (isset($name)) : ?>
-            <h2>Hello <?= htmlspecialchars($name); ?>!</h2>
-        <?php else: ?>
-            <p>Try <a href="http://www.slimframework.com">SlimFramework</a></p>
-        <?php endif; ?>
-    </body>
-</html>
+<p>No location data will be displayed, and character/corp/alliance names will only be displayed if their owner wishes them to be</p>
+
+<p>Under development, so please excuse the mess</p>
+</div>
+</div>
+<div class="pure-u-1 pure-u-lg-1-2">
+<h2>Best Miners This Month</h2>
+<ul id="bestOwner">
+</ul>
+</div>
+<div class="pure-u-1  pure-u-lg-1-2">
+<h2>Quantity Mined This Month</h2>
+<canvas id="totalMined"></canvas>
+</div>
+</div>
+{% endblock %}
